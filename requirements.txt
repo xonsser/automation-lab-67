@@ -1,0 +1,17 @@
+import random
+
+# Компьютер загадывает случайное число от 1 до 10
+secret_number = random.randint(1, 10)
+
+# Игрок пытается угадать число
+guess = int(input("Угадай число от 1 до 10: "))
+
+# Цикл продолжается до тех пор, пока игрок не угадает правильно
+while guess != secret_number:
+    if guess < secret_number:
+        print("Больше!")
+    else:
+        print("Меньше!")
+    guess = int(input("Попробуй ещё: "))
+
+print("Правильно! Ты угадал.")
